@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // ✅ Update with your frontend domain
+    origin: "https://coruscating-churros-40f467.netlify.app/", // ✅ Update with your frontend domain
     credentials: true,
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
