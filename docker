@@ -1,0 +1,25 @@
+#backend image run command
+docker run -d   --name bookanytime-backend   -p 5000:5000   --network backend_network   -v /app/uploads:/app/uploads   -v /etc/letsencrypt:/etc/letsencrypt   bookanytime-backend:latest
+
+#fronted imange run command
+
+docker run -d -p 5173:5173 \
+--name bookanytime-frontend \
+--network backend_network \
+bookanytime-frontend:latest
+
+# monogdb run command
+
+docker run -d -p 27017:27017 \
+--name mongo \
+--network backend_network \
+-v /app/data:/data/db \
+mongo:latest
+
+# mongodb backup to restore
+docker cp /path/to/your/backupfile.bson mongo:/backup
+docker exec -it mongo mongorestore --drop --dir /backup
+
+#load or create docker images from github tar file 
+
+docker load -i bookanytime-frontend-latest.tar

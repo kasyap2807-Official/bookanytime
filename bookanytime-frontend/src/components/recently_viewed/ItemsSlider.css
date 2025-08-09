@@ -1,0 +1,152 @@
+.items-slider-container {
+  background-color: var(--sp-background-color);
+  /* box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68); */
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 120px;
+
+  
+}
+
+.items-slider-container .item-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+
+.item-slider {
+  padding: 0px 5px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+  
+}
+
+.item-slider .item-container {
+  display: inline-flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f1f1f1;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* WebKit Scrollbar Styling */
+.item-slider .item-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.item-slider .item-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.item-slider .item-container::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.item-slider .item-container span {
+  margin: 0px 10px;
+}
+
+/* Card item styles */
+.item-container .card {
+  border: unset;
+  width: 260px; /* Adjust card width */
+  height: 300px; /* Adjust card height */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item-container .card img {
+  width: 100%;
+  height: 180px; /* Adjust image height */
+  object-fit: cover;
+}
+
+.item-container .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.item-container .card-category {
+  font-size: 16px;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.item-container .card-location {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.item-container .card-rating {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .item-container .card {
+    width: 200px; 
+    height: 260px; 
+  }
+
+  .item-container .card img {
+    height: 140px; 
+  }
+
+  .item-container .card-title {
+    font-size: 16px;
+  }
+
+  .item-container .card-category {
+    font-size: 14px;
+  }
+
+  .item-container .card-location {
+    font-size: 12px;
+  }
+
+  .item-container .card-rating {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-container .card {
+    width: 200px; 
+    height: 240px; /* Adjust height for mobile screens */
+  }
+
+  .item-container .card img {
+    height: 120px; /* Adjust image height for mobile screens */
+  }
+
+  .item-container .card-title {
+    font-size: 14px;
+  }
+
+  .item-container .card-category {
+    font-size: 12px;
+  }
+
+  .item-container .card-location {
+    font-size: 10px;
+  }
+
+  .item-container .card-rating {
+    font-size: 10px;
+  }
+}

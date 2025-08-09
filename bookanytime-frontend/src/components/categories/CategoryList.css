@@ -1,0 +1,160 @@
+.categories-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    scroll-behavior: smooth;
+    /* background: #ffffff; */
+    border-radius: 12px; /* Rounded corners */
+    width: 90vw;
+    max-width: 100vw;
+    margin-top: -40px;
+}
+
+.categories-container::-webkit-scrollbar {
+    display: none;
+}
+
+.category-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: 100px; /* Fixed width for consistent spacing */
+    transition: transform 0.2s ease;
+    padding: 4px;
+}
+
+.category-wrapper:active {
+    transform: scale(0.95);
+}
+
+.category-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(236, 229, 229); */
+    border-radius: 70%;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.category-card img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 6px;
+    pointer-events: none; /* Prevent image drag */
+}
+
+.category-name {
+    margin-top: -6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    white-space: normal; /* Allow text wrap */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+    line-height: 1.2;
+    height: 2.4em; /* Fixed height for 2 lines */
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure arrows are above other content */
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.scroll-arrow:hover {
+    background: #f8f8f8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-arrow.left {
+    left: 4px;
+}
+
+.scroll-arrow.right {
+    right: 4px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .categories-container {
+        width: 98vw; /* Full width for mobile view */
+        padding: 8px; /* Reduce padding */
+        gap: 4px; /* Reduce gap between items */
+        margin-top: -50px;
+    }
+
+    .category-wrapper {
+        width: 90px; /* Adjust width for mobile */
+    }
+
+    .category-card {
+        width: 60px; /* Increase image size */
+        height: 60px; /* Increase image size */
+    }
+
+    .category-name {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-container {
+        width: 98vw; /* Full width for smaller mobile devices */
+        padding: 9px; /* Further reduce padding */
+        gap: 7px; /* Further reduce gap between items */
+    }
+
+    .category-wrapper {
+        width: 80px; /* Adjust width for smaller screens */
+    }
+
+    .category-card {
+        width: 70px; /* Further increase image size */
+        height: 70px; /* Further increase image size */
+    }
+
+    .category-name {
+        font-size: 11px; /* Adjust font size */
+    }
+
+    .scroll-arrow {
+        width: 24px;
+        height: 24px;
+    }
+}

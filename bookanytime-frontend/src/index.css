@@ -1,0 +1,99 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ Fix Mobile View Scaling */
+@media (max-width: 1024px) {
+  html, body {
+    width: 100%;
+    height: auto;
+    font-size: 16px;  /* Prevent text from being too large */
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    height: auto;
+    font-size: 14px; /* Adjust font size for better fit */
+  }
+
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body fits all screen sizes */
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Fix container width and spacing */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ✅ Fix Viewport Zoom Issue */
+@media (max-width: 1024px) {
+  html, body {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+

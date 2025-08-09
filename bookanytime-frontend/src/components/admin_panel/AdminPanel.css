@@ -1,0 +1,110 @@
+/* Main Admin Container */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+  
+  /* Admin Header */
+  .admin-header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1002; /* Ensure it's above everything */
+    height: 60px;
+  }
+  
+  /* Sidebar */
+  .admin-sidebar {
+    width: 250px;
+    background: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Below admin header */
+    left: 0;
+    height: calc(100vh - 60px);
+    z-index: 1001;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .admin-sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  .admin-sidebar a:hover {
+    background: #555;
+  }
+  
+  /* Main Content */
+  .admin-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+    margin-top: 60px; /* Ensures content does not overlap with header */
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    /* Hide Sidebar initially */
+    .admin-sidebar {
+      left: -100%;
+      width: 200px;
+    }
+  
+    /* Sidebar opens when toggled */
+    .admin-sidebar.open {
+      left: 0;
+    }
+  
+    /* Show Hamburger Menu */
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+      z-index: 1003;
+    }
+  
+    /* Adjust content for mobile */
+    .admin-content {
+      margin-left: 0;
+      padding-top: 60px;
+    }
+  }
+  
+  /* Hide Hamburger on Large Screens */
+  @media (min-width: 769px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+  

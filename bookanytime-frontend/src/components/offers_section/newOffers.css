@@ -1,0 +1,134 @@
+.offer-container {
+  padding: 20px;
+  width:90%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  height: 650px;
+}
+
+.categories-scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  flex-shrink: 1;
+  margin-bottom: 10px;
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none;
+}
+.category-tabs {
+  gap: 12px;
+}
+
+.category-tab {
+  border: none;
+  background: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn-link-active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.btn-link-inactive {
+  color: #333;
+}
+.scroll-arrow {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-arrow:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+
+.view-all-text {
+  font-weight: 500;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.offers-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  max-height: 500px; /* Adjust depending on card height */
+  position: relative;
+}
+
+.offers-scroll-content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.offer-viewed-item {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.offer-viewed-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  height: 240px;
+
+}
+.property-image-container {
+  height: 220px;
+
+}
+.property-image-container img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+
+}
+.offers-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.offers-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.offers-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 25px;
+}
+
+.offer-card-wrapper {
+  width: 400px;
+  height: 220px;
+}
+
+@media (max-width: 768px) {
+  .offer-card-wrapper {
+    width: 330px;
+  }
+  .offer-container {
+    /* padding: 20px; */
+    width:97%;
+    height: 600px;
+
+  }
+}

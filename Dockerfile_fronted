@@ -1,0 +1,24 @@
+# Use the official Node.js image as the base
+FROM node:20-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the frontend source code to the container
+COPY bookanytime-frontend /app
+
+# Install npm packages, including rc-slider
+RUN npm install rc-slider
+
+# Install all npm packages, including @react-google-maps/api
+RUN npm install @react-google-maps/api 
+
+# Install all other npm packages
+RUN npm install
+
+# Set the command to start the development server
+CMD ["npm", "run", "dev", "--", "--host"]
+
+# Expose the default port used by the dev server (usually 5173 for Vite)
+EXPOSE 5173
+

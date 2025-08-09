@@ -1,0 +1,38 @@
+/* WishlistDetailsPage.css */
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.property-item {
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  margin: 0 auto; /* Center the item if there's only one */
+
+}
+
+.property-item:hover {
+  transform: scale(1.05);
+}
+
+.property-item img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.property-details {
+  background-color: #f8f9fa;
+  border-radius: 0 0 5px 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Adjust as needed */
+}

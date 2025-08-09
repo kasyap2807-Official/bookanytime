@@ -1,0 +1,30 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  overflow-x: hidden; /* Prevents side scrolling */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+
+/* ✅ Fix Mobile Layout */
+@media (max-width: 768px) {
+  #root {
+    width: 50%;
+    min-height: 50vh;
+    padding: 0;
+  }
+
+  .logo {
+    height: 3.5em;
+  }
+}
+

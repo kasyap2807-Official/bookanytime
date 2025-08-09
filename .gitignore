@@ -1,0 +1,4 @@
+*.tar
+myenv/
+bookanytime-backend/node_modules/
+bookanytime-frontend/node_modules/

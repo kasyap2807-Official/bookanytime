@@ -1,0 +1,71 @@
+@media (max-width: 768px) {
+  /* Ensure the table wrapper has horizontal scrolling */
+  .table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling for the table */
+    -webkit-overflow-scrolling: touch;
+    width: 100%; /* Full width of its parent container */
+  }
+
+  /* Ensure the table itself takes up the full width of its parent container */
+  .table {
+    width: 300%;
+    table-layout: fixed; /* Let the table expand based on content */
+  }
+
+  /* Adjust table cell padding and font size for better visibility */
+  .table td, .table th {
+    /* padding: 0.5rem; */
+    font-size: 0.75rem; /* Slightly smaller font size */
+    text-align: center; /* Center text for readability */
+    word-wrap: break-word;  /* Do not wrap words */
+    white-space: normal; 
+    overflow: hidden; 
+    /* text-overflow: ellipsis;  */
+  }
+
+  /* Ensure header cells don't wrap */
+  .table th {
+    font-size: 0.875rem; /* Slightly larger font size for table header */
+    white-space: nowrap; /* Prevent header text from wrapping */
+  }
+
+  /* Dropdown styling */
+  select.form-select {
+    width: 100%; /* Make dropdowns full-width */
+    padding: 0.5rem;
+    font-size: 0.875rem; /* Smaller font size for better readability */
+    margin-bottom: 10px;
+  }
+
+  /* Make pagination more user-friendly */
+  .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .pagination .page-item {
+    margin: 0.5rem;
+  }
+
+  .pagination .page-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Ensure the container doesn't have too much padding */
+  .container {
+    padding: 0 10px; /* Reduced padding to prevent overflow */
+  }
+
+  h2.text-center {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  /* Ensure table rows and pagination are properly spaced */
+  .my-2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
