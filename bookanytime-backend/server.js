@@ -15,7 +15,8 @@ const allowedOrigins = [
   "https://coruscating-churros-40f467.netlify.app",
   "http://localhost:5173",
   "https://fantastic-nasturtium-d1d70b.netlify.app",
-  "http://bookanytime.in"
+  "http://bookanytime.in",
+  "https://bookanytime.in"
 ];
 
 app.use(
