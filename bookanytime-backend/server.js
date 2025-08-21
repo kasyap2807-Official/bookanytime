@@ -13,7 +13,9 @@ const app = express();
 
 const allowedOrigins = [
   "https://coruscating-churros-40f467.netlify.app",
-  "http://localhost:5173"
+  "http://localhost:5173",
+  "https://fantastic-nasturtium-d1d70b.netlify.app",
+  "http://bookanytime.in"
 ];
 
 app.use(
